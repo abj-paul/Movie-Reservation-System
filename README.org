@@ -1,0 +1,15 @@
+* About this project
+Its a learning-oriented project in C. I have learnt about
+    - Using file as database.
+    - Makefile.
+    - Header Guards.
+    - I/O Streams.
+    - memset() and why its necesssary to initialize buffers.
+* How it works.
+It has 3 modes.
+** Admin Mode
+   Admin can add, delete or edit Movies to be premiered in the cinema hall. The information is stored so that it can be loaded anytime.
+** User Mode
+   Users can book or cancel tickets, see their ticket list and movies to be premiered. They can choose to pay online or locally. The information is stored as well as a separate file for each user.
+** Moderator Mode
+   The moderator can look up the information for any user given their username and cancel a ticket if the user decides to do so or he/she does not pay in time. He can also notify them. The changes are updated in the respective user's ticket-list file.
