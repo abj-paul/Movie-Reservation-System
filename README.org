@@ -5,6 +5,7 @@ Its a learning-oriented project in C. I have learnt about
     - Header Guards.
     - I/O Streams.
     - memset() and why its necesssary to initialize buffers.
+    - Using an Emacs Org file as README.
 * How it works.
 It has 3 modes.
 ** Admin Mode
@@ -13,3 +14,34 @@ It has 3 modes.
    Users can book or cancel tickets, see their ticket list and movies to be premiered. They can choose to pay online or locally. The information is stored as well as a separate file for each user.
 ** Moderator Mode
    The moderator can look up the information for any user given their username and cancel a ticket if the user decides to do so or he/she does not pay in time. He can also notify them. The changes are updated in the respective user's ticket-list file.
+* Code Documentation
+It has 4 header files and 5 .c files.
+** Movie.h file
+It stores the data structure and function prototypes for adding, removing, changing, loading, saving the data structure.
+    - MovieList_Initialize()
+    - MovieList_Destroy() 
+    - MovieList_AddMovie() 
+    - MovieList_DeleteMovie() 
+    - MovieList_Save() 
+    - MovieList_Load() 
+    - MovieList_Print() 
+
+** Ticket.h file
+It, similarly, stores the data structure and function prototypes for adding, removing, changing, loading, saving the data structure.
+    - TicketList_Initialize()
+    - TicketList_Destroy() 
+    - TicketList_AddMovie() 
+    - TicketList_DeleteMovie() 
+    - TicketList_Save() 
+    - TicketList_Load() 
+    - TicketList_Print() 
+** Auxiliary.h file
+It has auxiliary functions and global variables. 
+    - input(buffer): Its an amazing function to take input. It can take multiple space-separated string as input. It gets rid of the endline(\n) at the end of the buffer.
+** main.c file
+   Its the main.c file that the compiler loads at startup. 
+** Interface.h file
+   To decrease redundancy and increase readbility, the interface for user, moderator and admin are separated using functions. This interface header file contais these functions.
+   - user_interface()
+   - moderator_interface()
+   - admin_interface()
